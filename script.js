@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <i class="fas fa-check"></i>
                             </div>
                             <h3 style="color: var(--gold); font-size: 2rem; margin-bottom: 15px;">Reservation Received!</h3>
-                            <p style="color: var(--text-muted); font-size: 1.1rem;">We've sent a confirmation request to our team. <br> Please check your email inbox if this is your first time.</p>
+                            <p style="color: var(--text-muted); font-size: 1.1rem;">We've sent a confirmation request to our team. <br> <strong>Important:</strong> If this is your first time using this email, please check your inbox for an activation link from FormSubmit.</p>
                         </div>
                     `;
                 } else {
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             } catch (error) {
                 console.error('Form Error:', error);
-                alert('Submission failed. Please ensure you are running the site through a web server (e.g., Live Server or http-server).');
+                alert('Submission failed. \n\n1. Check your internet connection.\n2. Ensure the email zentrosalononline@gmail.com has been activated via FormSubmit.\n3. Make sure the site is running on a web server (Live Server/Netlify).');
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalBtnText;
             }
